@@ -24,6 +24,10 @@ body {
 }
 
 /* font-family: 'Inter', sans-serif; */
+.text-color-white {
+    color: var(--white-color);
+}
+
 .text-h1-regular {
     font-size: 48px;
     font-weight: 400;
@@ -137,23 +141,63 @@ body {
 }
 
 .main-info {
-    max-width: 600px;
+    width: 600px;
 }
 
 .about-us {
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+    line-height: 25.2px;
 }
 
 .services {
+    overflow: hidden;
     width: 510px;
-    height: 1875px;
     top: 328px;
     left: 810px;
     border-radius: 20px 20px 0px 0px;
 }
 
 .card {
+    max-width: 510px;
+    max-height: 375px;
+}
+
+.card-panel {
+    display: flex;
+    position: absolute;
+    width: 430px;
+    height: 50px;
+    margin: 40px 40px;
+
+}
+
+.card-header {
+    display: flex;
+}
+
+.card-icon {}
+
+.card-title {
+    margin-left: 20px;
+}
+
+.card-button-plus {}
+
+.card-gradient {
+    position: absolute;
     width: 510px;
+    height: 375px;
+    background: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%);
+}
+
+.card-background {}
+
+.tagline {
+    margin-right: 0;
+    margin-left: auto;
+    width: 630px;
+    height: 820px;
+    background-color: var(--blue-color);
 }
