@@ -139,6 +139,17 @@ body {
     margin: 0 auto;
 }
 
+.cover {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bottom-block {
+    display: flex;
+    flex-direction: row;
+}
+
 .main-info {
     width: 600px;
 }
@@ -174,7 +185,6 @@ body {
     background-position: center;
     color: white;
     padding: 40px;
-
 }
 
 .card1 {
@@ -193,8 +203,34 @@ body {
     height: 50px;
 }
 
-.card-button-plus {
+.card-button-plus,
+.card-button-back {
     margin: 0 0 0 auto;
+}
+
+.card-button-plus,
+.card-button-back:hover {
+    cursor: pointer;
+}
+
+.card-button-back {
+    display: none;
+}
+
+.card-description {
+    margin: 40px 0;
+}
+
+.card-button {
+    width: 273px;
+    height: 60px;
+    padding: 20px 60px 20px 60px;
+    border-radius: 10px;
+    background-color: var(--red-color);
+}
+
+.card-button:hover {
+    cursor: pointer;
 }
 
 .contact-block {
@@ -230,17 +266,6 @@ body {
     height: 172px;
 }
 
-.cover {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.bottom-block {
-    display: flex;
-    flex-direction: row;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -251,18 +276,21 @@ body {
     padding: 40px 0px 40px 0px;
     border-radius: 20px;
 }
+
 .contact-form-title {
     margin: 0 auto;
     width: 411px;
     font-size: 32px;
     text-align: center;
 }
+
 .contact-form-fields {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     width: 409px;
 }
+
 .contact-form-fields .form-field {
     padding: 20px 16px;
     width: 409px;
@@ -271,6 +299,7 @@ body {
     border: 1px solid var(--grey-dark-color);
     margin-bottom: 10px;
 }
+
 .contact-form-fields .form-button {
     margin: 0 auto;
     width: 219px;
@@ -279,4 +308,39 @@ body {
     background-color: var(--blue-color);
     margin-bottom: 10px;
     text-align: center;
+}
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (max-width:961px)  { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    
+}
+@media (max-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+    
+}
+@media (max-width:1281px) { 
+    /* hi-res laptops and desktops */ 
+    .cover {
+        flex-direction: column;
+    }
+    .services {
+        display: flex;
+        overflow-y:auto;
+        overflow-x: auto;
+        width: auto;
+        height: 375px;
+        border-radius: 20px 0px 0px 20px;
+        -ms-overflow-style: none;
+        /* for Internet Explorer, Edge */
+        scrollbar-width: none;
+        /* for Firefox */
+    }
+    
+    .services::-webkit-scrollbar {
+        display: none;
+        /* for Chrome, Safari, and Opera */
+    }
 }
