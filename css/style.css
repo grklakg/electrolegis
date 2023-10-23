@@ -198,13 +198,16 @@ body {
 }
 
 .contact-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     left: 0;
     width: calc(100vw - var(--tagline-block-width));
     height: 100vh;
     background-image: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%), url('../img/contact-block-image.jpg');
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 
 .tagline-block {
@@ -236,4 +239,44 @@ body {
 .bottom-block {
     display: flex;
     flex-direction: row;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 490px;
+    height: 500px;
+    background-color: var(--white-color);
+    padding: 40px 0px 40px 0px;
+    border-radius: 20px;
+}
+.contact-form-title {
+    margin: 0 auto;
+    width: 411px;
+    font-size: 32px;
+    text-align: center;
+}
+.contact-form-fields {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 409px;
+}
+.contact-form-fields .form-field {
+    padding: 20px 16px;
+    width: 409px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid var(--grey-dark-color);
+    margin-bottom: 10px;
+}
+.contact-form-fields .form-button {
+    margin: 0 auto;
+    width: 219px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--blue-color);
+    margin-bottom: 10px;
+    text-align: center;
 }
