@@ -388,4 +388,10 @@ body {
         width: 100%;
         position: static;
     }
+
+    .tagline-block {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 }
