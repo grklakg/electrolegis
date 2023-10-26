@@ -393,5 +393,9 @@ body {
         height: auto;
         padding-top: 80px;
         padding-bottom: 80px;
+        background-image: url('../img/lines-tablet.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: right;
     }
 }
