@@ -324,12 +324,209 @@ body {
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 }
 
-@media (min-width:641px) {
+@media (max-width:641px) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+    :root {
+        --header-margin-bottom: 80px;
+        --header-width: 944px;
+    }
+
+    .text-h1-regular {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.8px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--blue-dark-color);
+    }
+    
+    .text-h1-bold {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--red-color);
+    }
+    
+    .text-h2-regular {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--blue-dark-color);
+    }
+    
+    .text-h2-bold {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--red-color);
+    }
+    
+    .text-h3 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19.2px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--blue-dark-color);
+        text-transform: uppercase;
+    }
+    
+    .text-regular {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16.8px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--blue-dark-color);
+    }
+    
+    .text-bold {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16.8px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--blue-dark-color);
+    }
+    
+    .text-other {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.6px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--white-color);
+        text-transform: uppercase;
+    }
+
+    .header {
+        height: auto;
+        margin: 0 10px var(--header-margin-bottom) 10px;
+    }
+
+    .logo {
+        width: 140px;
+        height: 100px;
+        padding-top: 20px;
+    }
+
+    .company-name {
+        text-align: center;
+        
+    }
+
+    .phone-number {
+        padding-top: 20px;
+    }
+
+    .main-info {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .arrow {
+        width: 39.3px;
+        height: 50px;
+    }
+    
+    .about-us .text-regular {
+        width: 221px;
+    }
+    
+    .about-us {
+        padding-top: 20px;
+    }
+    .services {
+        margin: 80px 10px 80px 10px;
+        width: auto;
+        border-radius: 20px;
+    }
+    .card {
+        width: auto;
+        padding: 20px 18px 20px 18px;
+    }
+
+    .card-header {
+        width: auto;
+    }
+
+    .card-icon, .card-button-plus, .card-button-back {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 40px;
+        padding: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+        height: auto;
+        margin: 40px 20px 40px 20px;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .contact-form-fields, .contact-form-title {
+        width: auto;
+    }
+    .contact-form-title {
+        text-align: center;
+    }
+
+    .contact-form-fields .form-field {
+        width: auto;
+        height: 40px;
+    }
+
+    .contact-form-fields {
+        margin: 20px auto 0 auto;
+    }
+
+    .tagline-text {
+        width: 200px;
+        height: 96px;
+    }
+
+    .tagline-block {
+        background-size: cover;
+    }
+    
 }
 
 @media (max-width:961px) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+    .container {
+        margin: 0;
+        max-width: 100vw;
+    }
+
+    /* .services {
+        display: block;
+        margin: 160px auto 80px auto;
+        overflow: auto;
+        width: 510px;
+        height: auto;
+        border-radius: 20px;
+    
+    } */
+
+    .main-info {
+        position: static;
+
+    }
 
 }
 
@@ -342,15 +539,7 @@ body {
 
     /* hi-res laptops and desktops */
 
-    :root {
-        --header-width: 944px;
-    }
 
-    .header {
-        max-width: none;
-        position: sticky;
-        margin: 0 40px var(--header-margin-bottom) 40px;
-    }
 
     .container {
         margin: 0;
@@ -370,15 +559,7 @@ body {
         flex-direction: column;
     }
 
-    .services {
-        display: flex;
-        margin: 160px 0 80px 285px;
-        overflow: auto;
-        width: max-content;
-        height: 375px;
-        border-radius: 20px 0px 0px 20px;
-    
-    }
+
 
     .bottom-block {
         display: block;
@@ -395,7 +576,60 @@ body {
         padding-bottom: 80px;
         background-image: url('../img/lines-tablet.svg');
         background-repeat: no-repeat;
-        background-size: contain;
         background-position-x: right;
+    }
+}
+
+@media (max-width:1281px) and (min-width: 961px) {
+    :root {
+        --header-margin-bottom: 160px;
+        --header-width: 944px;
+    }
+
+    .header {
+        max-width: none;
+        position: sticky;
+        margin: 0 40px var(--header-margin-bottom) 40px;
+    }
+
+    .services {
+        display: flex;
+        margin: 160px 0 80px 285px;
+        overflow: auto;
+        width: max-content;
+        height: 375px;
+        border-radius: 20px 0px 0px 20px;
+    
+    }
+
+    .tagline-block {
+        background-size: contain;
+    }
+}
+
+@media (max-width:961px) and (min-width: 641px) {
+    :root {
+        --header-margin-bottom: 160px;
+        --header-width: 944px;
+    }
+
+    .header {
+        max-width: none;
+        position: sticky;
+        margin: 0 20px var(--header-margin-bottom) 20px;
+    }
+
+    .services {
+        display: block;
+        margin: 160px auto 80px auto;
+        overflow: auto;
+        width: 510px;
+        height: auto;
+        border-radius: 20px;
+    
+    }
+
+    .tagline-block {
+        background-size: contain;
     }
 }
