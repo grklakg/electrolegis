@@ -178,8 +178,6 @@ body {
     border-radius: 20px 20px 0px 0px;
 }
 
-
-
 .card {
     width: 510px;
     height: 375px;
@@ -316,16 +314,7 @@ body {
     box-shadow: none;
 }
 
-@media (min-width:320px) {
-    /* smartphones, iPhone, portrait 480x320 phones */
-}
-
-@media (min-width:481px) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-}
-
 @media (max-width:641px) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
     :root {
         --header-margin-bottom: 80px;
@@ -432,6 +421,7 @@ body {
         margin: 0 10px 0 10px;
         overflow-wrap: break-word;
     }
+
     .arrow {
         width: 39.3px;
         height: 50px;
@@ -444,11 +434,13 @@ body {
     .about-us {
         padding-top: 20px;
     }
+
     .services {
         margin: 80px 10px 80px 10px;
         width: auto;
         border-radius: 20px;
     }
+
     .card {
         width: auto;
         height: 222px;
@@ -518,23 +510,10 @@ body {
 }
 
 @media (max-width:961px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-
     .container {
         margin: 0;
         max-width: 100vw;
     }
-
-    /* .services {
-        display: block;
-        margin: 160px auto 80px auto;
-        overflow: auto;
-        width: 510px;
-        height: auto;
-        border-radius: 20px;
-    
-    } */
 
     .main-info {
         position: static;
@@ -543,17 +522,7 @@ body {
 
 }
 
-@media (max-width:1025px) {
-    /* big landscape tablets, laptops, and desktops */
-
-}
-
 @media (max-width:1281px) {
-
-    /* hi-res laptops and desktops */
-
-
-
     .container {
         margin: 0;
         max-width: 100vw;
