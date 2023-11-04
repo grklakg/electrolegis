@@ -427,8 +427,10 @@ body {
     }
 
     .main-info {
-        width: 300px;
-        margin: 0 auto;
+        max-width: 300px;
+        width: auto;
+        margin: 0 10px 0 10px;
+        overflow-wrap: break-word;
     }
     .arrow {
         width: 39.3px;
