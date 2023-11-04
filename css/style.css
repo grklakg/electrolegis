@@ -449,6 +449,7 @@ body {
     }
     .card {
         width: auto;
+        height: 222px;
         padding: 20px 18px 20px 18px;
     }
 
@@ -459,6 +460,10 @@ body {
     .card-icon, .card-button-plus, .card-button-back {
         width: 30px;
         height: 30px;
+    }
+
+    .card-description {
+        margin: 20px 0;
     }
 
     .card-button {
@@ -490,7 +495,13 @@ body {
     }
 
     .contact-form-fields {
-        margin: 20px auto 0 auto;
+        margin: 20px 18px 0 18px;
+    }
+
+    .contact-form-fields .form-button {
+        width: auto;
+        height: 40px;
+        margin: 0;
     }
 
     .tagline-text {
