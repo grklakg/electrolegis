@@ -209,6 +209,18 @@ body {
 #card1 {
     background-image: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%), url('../img/card-background-1.jpg');
 }
+#card2 {
+    background-image: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%), url('../img/card-background-2.jpg');
+}
+#card3 {
+    background-image: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%), url('../img/card-background-3.jpg');
+}
+#card4 {
+    background-image: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%), url('../img/card-background-4.jpg');
+}
+#card5 {
+    background-image: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%), url('../img/card-background-5.jpg');
+}
 
 .card-header {
     width: 430px;
