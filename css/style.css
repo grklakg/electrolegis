@@ -181,29 +181,32 @@ body {
 .card {
     width: 510px;
     height: 375px;
+    background-color: none;
     background-size: cover;
     background-position: center;
     color: white;
     padding: 40px;
     margin: 0;
-    transition: background-color .2s, background-image .4s;
 }
 
 .card-open {
-    background-color: var(--blue-color);
+    background-color: var(--blue-color) !important;
     background-image: none !important;
-    transition: background-color .2s, background-image .4s;
 }
 
-.card-open .card-active, .card-open .card-button-back {
+.card-open .card-desc-block, .card-open .card-button-back {
     display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
-.card-active, .card-open .card-button-plus {
-    display: none;
+.card-desc-block {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .4s, opacity .2s linear;
 }
 
-.card1 {
+#card1 {
     background-image: linear-gradient(180deg, #001E47 0%, rgba(0, 30, 71, 0) 100%), url('../img/card-background-1.jpg');
 }
 
@@ -219,18 +222,23 @@ body {
     height: 50px;
 }
 
-.card-button-plus,
+.card-button-open {
+    content: url(../img/button-plus.svg);
+}
+
+.card-open .card-button-open {
+    content: url(../img/button-back.svg);
+}
+
+.card-button-open,
 .card-button-back {
+    width: 50px;
+    height: 50px;
     margin: 0 0 0 auto;
 }
 
-.card-button-plus,
-.card-button-back:hover {
+.card-button-open:hover {
     cursor: pointer;
-}
-
-.card-button-back {
-    display: none;
 }
 
 .card-description {
@@ -467,7 +475,7 @@ body {
         width: auto;
     }
 
-    .card-icon, .card-button-plus, .card-button-back {
+    .card-icon, .card-button-open {
         width: 30px;
         height: 30px;
     }
