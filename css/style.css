@@ -24,7 +24,7 @@ body {
     --header-height: 248px;
     --header-width: 1200px;
     --header-margin-bottom: 80px;
-    --tagline-block-width: calc((100vw - var(--header-width))/2 + 500px);
+    --tagline-block-width: calc((100% - var(--header-width))/2 + 510px);
 }
 
 .text-color-white {
