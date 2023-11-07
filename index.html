@@ -32,13 +32,18 @@
                 </div>
             </div>
             <div class="services">
+                <script>
+                    function openCard(cardId) {
+                        document.getElementById('card' + cardId).classList.contains('card-open') ? document.getElementById('card' + cardId).classList.remove('card-open') : document.getElementById('card' + cardId).classList.add('card-open')
+                    }
+                </script>
                 <div class="card" id="card1">
                     <div class="card-header">
                         <img src="img/card-icon-1.svg" alt="card-icon" class="card-icon">
                         <div class="card-title text-bold text-color-white">Получение технических условий для
                             подключений
                         </div>
-                        <img alt="" class="card-button-open" onclick="document.getElementById('card1').classList.contains('card-open') ? document.getElementById('card1').classList.remove('card-open') : document.getElementById('card1').classList.add('card-open')">
+                        <img alt="" class="card-button-open" onclick="openCard(1)">
                     </div>
                     <div class="card-desc-block">
                         <div class="card-description text-regular text-color-white">
@@ -57,7 +62,7 @@
                         <div class="card-title text-bold text-color-white">
                             Согласование увеличения мощностей
                         </div>
-                        <img alt="" class="card-button-open" onclick="document.getElementById('card2').classList.contains('card-open') ? document.getElementById('card2').classList.remove('card-open') : document.getElementById('card2').classList.add('card-open')">
+                        <img alt="" class="card-button-open" onclick="openCard(2)">
                     </div>
                     <div class="card-desc-block">
                         <div class="card-description text-regular text-color-white">
@@ -74,7 +79,7 @@
                         <div class="card-title text-bold text-color-white">
                             Прохождение поверки счетчиков
                         </div>
-                        <img alt="" class="card-button-open" onclick="document.getElementById('card3').classList.contains('card-open') ? document.getElementById('card3').classList.remove('card-open') : document.getElementById('card3').classList.add('card-open')">
+                        <img alt="" class="card-button-open" onclick="openCard(3)">
                     </div>
                     <div class="card-desc-block">
                         <div class="card-description text-regular text-color-white">
@@ -91,7 +96,7 @@
                         <div class="card-title text-bold text-color-white">
                             Обслуживание счетчиков
                         </div>
-                        <img alt="" class="card-button-open" onclick="document.getElementById('card4').classList.contains('card-open') ? document.getElementById('card4').classList.remove('card-open') : document.getElementById('card4').classList.add('card-open')">
+                        <img alt="" class="card-button-open" onclick="openCard(4)">
                     </div>
                     <div class="card-desc-block">
                         <div class="card-description text-regular text-color-white">
@@ -108,7 +113,7 @@
                         <div class="card-title text-bold text-color-white">
                             Сопровождение споров по порядку расчетов
                         </div>
-                        <img alt="" class="card-button-open" onclick="document.getElementById('card5').classList.contains('card-open') ? document.getElementById('card5').classList.remove('card-open') : document.getElementById('card5').classList.add('card-open')">
+                        <img alt="" class="card-button-open" onclick="openCard(5)">
                     </div>
                     <div class="card-desc-block">
                         <div class="card-description text-regular text-color-white">
