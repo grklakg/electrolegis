@@ -247,7 +247,8 @@ body {
 }
 
 .card-button-open,
-.card-button-back {
+.card-button-back,
+.button-back {
     width: 50px;
     height: 50px;
     margin: 0 0 0 auto;
@@ -332,25 +333,59 @@ body {
     width: 409px;
 }
 
-.contact-form-fields .form-field {
+.form-field {
     padding: 20px 16px;
     width: 409px;
     height: 60px;
+    max-height: 300px;
     border-radius: 10px;
     border: 1px solid var(--grey-dark-color);
     margin-bottom: 10px;
+    resize:none;
 }
 
-.contact-form-fields .form-button {
+.form-button {
     margin: 0 auto;
     width: 219px;
     height: 60px;
     border-radius: 10px;
     background-color: var(--blue-color);
     margin-bottom: 10px;
-    text-align: center;
+    text-align: center !important;
     border: 0;
     box-shadow: none;
+}
+
+textarea {
+    min-height: 120px;
+    max-height: 300px;
+}
+
+.application-window {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    width: 90%;
+    height: auto;
+    max-height: 90%;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    border-radius: 20px;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,.1);
+}
+
+.application-window iframe {
+    width: 100%;
+}
+
+.application-window .button-back {
+    content: url(../img/button-back.svg);
 }
 
 @media (max-width:641px) {
@@ -491,7 +526,7 @@ body {
         width: auto;
     }
 
-    .card-icon, .card-button-open {
+    .card-icon, .card-button-open, .button-back {
         width: 30px;
         height: 30px;
     }
@@ -523,7 +558,7 @@ body {
         text-align: center;
     }
 
-    .contact-form-fields .form-field {
+    .form-field {
         width: auto;
         height: 40px;
     }
@@ -532,7 +567,7 @@ body {
         margin: 20px 18px 0 18px;
     }
 
-    .contact-form-fields .form-button {
+    .form-button {
         width: auto;
         height: 40px;
         margin: 0;
