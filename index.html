@@ -18,9 +18,15 @@
         </div>
         <div class="phone-number text-bold">+7 (960) 82-11-474</div>
     </header>
+    <script>
+        function openApplication() {
+            var appWindow = document.getElementsByClassName("application-window")[0];
+            appWindow.style.display = appWindow.style.display === "none" ? "flex" : "none";
+        }
+    </script>
     <div class="application-window">
-        <img alt="" class="button-back" onclick="">
-        <form class="contact-form-fields" action="mailto:artemmalkin546@gmail.com" method="post">
+        <img alt="" class="button-back" onclick="openApplication()">
+        <form class="order-form contact-form-fields" action="mailto:iruzanov@yandex.ru" method="post" enctype="text/plain">
             <input class="form-field text-regular" placeholder="ФИО" type="text" id="name" name="name" required>
             <input class="form-field text-regular" placeholder="Email" type="email" id="email" name="email"
                 required>
@@ -64,7 +70,7 @@
                             время и
                             ресурсы.
                         </div>
-                        <div class="card-button text-bold text-color-white">
+                        <div class="card-button text-bold text-color-white" onclick="openApplication()">
                             Оставить заявку
                         </div>
                     </div>
@@ -81,7 +87,7 @@
                         <div class="card-description text-regular text-color-white">
                             Поможем вам увеличить мощность с минимальными задержками и бюрократическими сложностями.
                         </div>
-                        <div class="card-button text-bold text-color-white">
+                        <div class="card-button text-bold text-color-white" onclick="openApplication()">
                             Оставить заявку
                         </div>
                     </div>
@@ -98,7 +104,7 @@
                         <div class="card-description text-regular text-color-white">
                             Проведем поверку счетчиков и обеспечим их соответствие стандартам.
                         </div>
-                        <div class="card-button text-bold text-color-white">
+                        <div class="card-button text-bold text-color-white" onclick="openApplication()">
                             Оставить заявку
                         </div>
                     </div>
@@ -115,7 +121,7 @@
                         <div class="card-description text-regular text-color-white">
                             Предоставим надежное обслуживание и регулярную проверку ваших счетчиков.
                         </div>
-                        <div class="card-button text-bold text-color-white">
+                        <div class="card-button text-bold text-color-white" onclick="openApplication()">
                             Оставить заявку
                         </div>
                     </div>
@@ -132,7 +138,7 @@
                         <div class="card-description text-regular text-color-white">
                             Окажем квалифицированную юридическую поддержку для решения финансовых споров с ресурсоснабжающими организациями.
                         </div>
-                        <div class="card-button text-bold text-color-white">
+                        <div class="card-button text-bold text-color-white" onclick="openApplication()">
                             Оставить заявку
                         </div>
                     </div>

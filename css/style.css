@@ -270,7 +270,7 @@ body {
     background-color: var(--red-color);
 }
 
-.card-button:hover {
+.form-button, .button-back, .card-button:hover {
     cursor: pointer;
 }
 
@@ -362,7 +362,7 @@ textarea {
 }
 
 .application-window {
-    display: flex;
+    display: none;
     padding: 20px;
     flex-direction: column;
     justify-content: center;
