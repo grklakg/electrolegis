@@ -24,9 +24,9 @@
             appWindow.style.display = appWindow.style.display === "none" ? "flex" : "none";
         }
     </script>
-    <div class="application-window">
+    <div class="application-window" style="display: none">
         <img alt="" class="button-back" onclick="openApplication()">
-        <form class="order-form contact-form-fields" action="mailto:iruzanov@yandex.ru" method="post" enctype="text/plain">
+        <form class="order-form contact-form-fields" action="./send-form.php" method="POST" enctype="application/x-www-form-urlencoded">
             <input class="form-field text-regular" placeholder="ФИО" type="text" id="name" name="name" required>
             <input class="form-field text-regular" placeholder="Email" type="email" id="email" name="email"
                 required>
