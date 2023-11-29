@@ -21,14 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->isSMTP();                                   
     $mail->Host = 'smtp.yandex.ru';
     $mail->SMTPAuth = true;                               
-    $mail->Username = 'a.rtm.mlkn@gmail.com';                 
-    $mail->Password = 'rtvlsxeqszlzufut ';                           
+    $mail->Username = 'a.rtm.mlkn@yandex.ru';                 
+    $mail->Password = 'rtvlsxeqszlzufut';                           
     $mail->SMTPSecure = 'ssl';                            
     $mail->Port = 465;                                   
      
     // Установка параметров для отправки письма
-    $mail->setFrom('a.rtm.mlkn@gmail.com', 'Mailer');
-    $mail->addAddress('a.rtm.mlkn@gmail.com', 'Owner');
+    $mail->setFrom('a.rtm.mlkn@yandex.ru', 'Mailer');
+    $mail->addAddress('a.rtm.mlkn@yandex.ru', 'Owner');
     
     // Добавление контента письма
     $mail->isHTML(true);                                  
