@@ -7,7 +7,6 @@ require 'PHPMailer/PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/PHPMailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  var_dump($_POST);
   $name = $_POST['name'];
   $email = $_POST['email'];
   $phone = $_POST['phone'];
@@ -27,19 +26,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->Port = 465;                                   
      
     // Установка параметров для отправки письма
-    $mail->setFrom('a.rtm.mlkn@yandex.ru', 'Mailer');
-    $mail->addAddress('a.rtm.mlkn@yandex.ru', 'Owner');
+    $mail->setFrom('a.rtm.mlkn@yandex.ru', 'Электролегис');
+    $mail->addAddress('a.rtm.mlkn@yandex.ru', 'a.rtm.mlkn@yandex.ru');
     
     // Добавление контента письма
     $mail->isHTML(true);                                  
-    $mail->Subject = 'Новое сообщение от ' . $name;
-    $mail->Body    = $text;
+    $mail->Subject = 'Новая заявка!';
+    $mail->Body    = 'Имя: ' . $name . '<br>Телефон: ' . $phone . '<br>Почта: ' . $email . '<br>Сообщение клиента:<br>' . $text;
     
     // Отправка письма
     $mail->send();
-    echo 'Письмо отправлено';
+
+    // Редирект
+    header('Location: /index.html');
+    exit;
   } catch (Exception $e) {
-    echo "Письмо не может быть отправлено. Ошибка: {$mail->ErrorInfo}";
+    //echo "Письмо не может быть отправлено. Ошибка: {$mail->ErrorInfo}";
   }
 }
 ?>

@@ -26,15 +26,38 @@
     </script>
     <div class="application-window" style="display: none">
         <img alt="" class="button-back" onclick="openApplication()">
-        <form class="order-form contact-form-fields" action="./send-form.php" method="POST" enctype="application/x-www-form-urlencoded">
+        <form class="order-form contact-form-fields" id="order-form" method="POST" enctype="application/x-www-form-urlencoded">
             <input class="form-field text-regular" placeholder="ФИО" type="text" id="name" name="name" required>
             <input class="form-field text-regular" placeholder="Email" type="email" id="email" name="email"
                 required>
             <input class="form-field text-regular" placeholder="Телефон" type="tel" id="phone" name="phone"
                 required>
             <textarea class="form-field text-regular" placeholder="Текст обращения" rows="6" name="text"></textarea>
-            <input class="form-button text-regular text-color-white" type="submit" value="Отправить">
+            <input class="form-button text-regular text-color-white" type="button" onclick="submitForm()" value="Отправить">
         </form>
+        <script>
+            function submitForm() {
+            var form = document.getElementById("order-form");
+            var formData = new FormData(form);
+            
+            openApplication();
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "./send-form.php", true);
+            xhr.onload = function () {
+                // Действия после получения ответа от сервера
+                if (xhr.status === 200) {
+                // Вывод сообщения об успешной отправке
+                alert("Заявка отправлена!");
+                } else {
+                // Вывод сообщения об ошибке
+                alert("Произошла ошибка при отправке!");
+                }
+            };
+            xhr.send(formData);
+            }
+
+        </script>
     </div>
     <div class="container">
        
