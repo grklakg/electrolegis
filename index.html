@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/inputmask.js"></script>
     <title>Электролегис</title>
 </head>
 
@@ -24,43 +25,64 @@
             appWindow.style.display = appWindow.style.display === "none" ? "flex" : "none";
         }
     </script>
+    <script>
+        function validateForm(form) {
+            var name = form.querySelector('#name').value;
+            var email = form.querySelector('#email').value;
+            var phone = form.querySelector('#phone').value;
+
+            if (name === "") {
+                alert("ФИО должно быть заполнено");
+                return false;
+            }
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Некорректный email");
+                return false;
+            }
+
+            var phonePattern = /^\+\d \(\d{3}\) \d{3}-\d{4}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Некорректный телефон");
+                return false;
+            }
+
+            return true;
+            }
+    </script>
+     <script>
+        function submitForm(form) {
+        var formData = new FormData(form);
+        
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "./send-form.php", true);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+            alert("Заявка отправлена!");
+            } else {
+            alert("Произошла ошибка при отправке!");
+            }
+        };
+        if (validateForm(form)) {
+            xhr.send(formData);
+            form.reset();
+        }
+        }
+    </script>
     <div class="application-window" style="display: none">
         <img alt="" class="button-back" onclick="openApplication()">
         <form class="order-form contact-form-fields" id="order-form" method="POST" enctype="application/x-www-form-urlencoded">
             <input class="form-field text-regular" placeholder="ФИО" type="text" id="name" name="name" required>
             <input class="form-field text-regular" placeholder="Email" type="email" id="email" name="email"
                 required>
-            <input class="form-field text-regular" placeholder="Телефон" type="tel" id="phone" name="phone"
+            <input class="phone-mask form-field text-regular" placeholder="Телефон" type="tel" id="phone" name="phone"
                 required>
             <textarea class="form-field text-regular" placeholder="Текст обращения" rows="6" name="text"></textarea>
-            <input class="form-button text-regular text-color-white" type="button" onclick="submitForm()" value="Отправить">
+            <input class="form-button text-regular text-color-white" type="button" onclick="submitForm(document.getElementById('order-form'));" value="Отправить">
         </form>
-        <script>
-            function submitForm() {
-            var form = document.getElementById("order-form");
-            var formData = new FormData(form);
-            
-            openApplication();
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "./send-form.php", true);
-            xhr.onload = function () {
-                // Действия после получения ответа от сервера
-                if (xhr.status === 200) {
-                // Вывод сообщения об успешной отправке
-                alert("Заявка отправлена!");
-                } else {
-                // Вывод сообщения об ошибке
-                alert("Произошла ошибка при отправке!");
-                }
-            };
-            xhr.send(formData);
-            }
-
-        </script>
     </div>
     <div class="container">
-       
         <div class="cover">
             <div class="main-info">
                 <div>
@@ -173,13 +195,13 @@
         <div class="contact-block">
             <div class="contact-form">
                 <div class="contact-form-title text-bold">Напишите нам,<br> и мы с вами свяжемся</div>
-                <form class="contact-form-fields" action="" method="post">
-                    <input class="form-field text-regular" placeholder="Имя" type="text" id="name" name="name" required>
+                <form class="contact-form-fields" id="contact-form" method="post">
+                    <input class="form-field text-regular" placeholder="ФИО" type="text" id="name" name="name" required>
                     <input class="form-field text-regular" placeholder="Email" type="email" id="email" name="email"
                         required>
-                    <input class="form-field text-regular" placeholder="Телефон" type="tel" id="phone" name="phone"
+                    <input class="phone-mask form-field text-regular" placeholder="Телефон" type="tel" id="phone" name="phone"
                         required>
-                    <input class="form-button text-regular text-color-white" type="submit" value="Отправить">
+                    <input class="form-button text-regular text-color-white" type="button" onclick="submitForm(document.getElementById('contact-form'))" value="Отправить">
                 </form>
             </div>
         </div>
@@ -190,6 +212,15 @@
             </div>
         </div>
     </div>
+    <script>
+        var phoneInputs = document.getElementsByName("phone");
+
+        var im = new Inputmask("+7 (999) 999-9999");
+        
+        phoneInputs.forEach(phone => {
+            im.mask(phone);
+        });
+    </script>
 </body>
 
 </html>
