@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: /index.html');
     exit;
   } catch (Exception $e) {
-    //echo "Письмо не может быть отправлено. Ошибка: {$mail->ErrorInfo}";
+    echo "Письмо не может быть отправлено. Ошибка: {$mail->ErrorInfo}";
   }
 }
 ?>
